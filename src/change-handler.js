@@ -25,12 +25,13 @@ class ChangeHandler {
         } else if (type === "quarter") {
             this.cashTendered += 25;
         };
+
     }
 
     /**
      * Returns true if enough coins have been inserted to at least meet the amountDue
      */
-    xisPaymentSufficient() {
+    isPaymentSufficient() {
         if (cashTendered >= amountDue) {
             return true;
         }
@@ -74,7 +75,7 @@ class ChangeHandler {
     }
 
 }
-let vendingMachine = new ChangeHandler(100);
+const vendingMachine = new ChangeHandler(50);
 
 
             //while change is greater than zero, while loop, is
